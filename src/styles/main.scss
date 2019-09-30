@@ -1,0 +1,137 @@
+@import "custom";
+@import "attributes";
+
+body {
+  .container-fluid {
+    max-width: 960px;
+    .header {
+      height: 10rem;
+      .logo {
+        .logo-text {
+          font-size: 1.5rem;
+          top: -2.7rem;
+          z-index: 1;
+          left: 1.5rem;
+        }
+      }
+      .logo:before {
+        display: block;
+        content: "";
+        width: 3rem;
+        height: 3rem;
+        border: 3px solid $orange;
+        z-index: -1;
+      }
+      .logo:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 4rem;
+        height: 1.5rem;
+        top: -5.5rem;
+        left: 1rem;
+        background-color: $light;
+        z-index: 0;
+      }
+      .header_form {
+        .form_input {
+          height: 2rem;
+          width: 13.5rem;
+          border-width: 1px;
+        }
+        .form_button {
+          font-size: 14px;
+          width: 2.5rem;
+          height: 2rem;
+          right: 0.3rem;
+          top: -0.05rem;
+        }
+      }
+      .navbar-nav {
+        flex-basis: 100%;
+      }
+      .nav-item {
+        flex-basis: 12.5%;
+        font-size: 0.9rem;
+      }
+    }
+    .heading {
+      flex-basis: 100%;
+      line-height: 1rem;
+      font-size: 0.9rem;
+      height: 1rem;
+    }
+    .heading:before {
+      @include article__heading-before;
+    }
+    .heading:after {
+      @include article__heading-after;
+    }
+    .heading_orange:before,
+    .heading_orange:after {
+      background-color: $orange;
+    }
+
+    .main-article {
+      background-image: url("../imgs/Mountains-and-hills.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 20rem;
+      .main-article__heading {
+        font-size: 4rem;
+        width: 55%;
+        line-height: 4.5rem;
+      }
+      .main-article__text {
+        font-size: 0.9rem;
+        width: 50%;
+        line-height: 1rem;
+      }
+      .button-read {
+        font-size: 0.9rem;
+        width: 8rem;
+        height: 2rem;
+      }
+    }
+    .articles {
+      .article {
+        .article__content {
+          font-size: 0.75rem;
+          line-height: 0.9rem;
+          flex-basis: 65%;
+        }
+        .article__image {
+          outline: 2px solid $orange;
+          border: 2px solid #ffffff;
+        }
+        .article__link-read-more {
+          text-decoration: underline;
+        }
+      }
+      .article_small {
+        .post {
+          .post__content {
+            font-size: 0.75rem;
+            line-height: 0.9rem;
+            .post__heading {
+              font-size: 0.75rem;
+            }
+          }
+          .post__image {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 1px solid #c4c4c4;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    height: 7rem;
+    .footer__text {
+      font-size: 0.9rem;
+      line-height: 1rem;
+    }
+  }
+}
+
