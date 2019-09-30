@@ -5,7 +5,10 @@ body {
   .container-fluid {
     max-width: 960px;
     .header {
-      height: 10rem;
+      height: 7rem;
+      .row {
+        height: 5rem;
+      }
       .logo {
         .logo-text {
           font-size: 1.5rem;
@@ -73,7 +76,7 @@ body {
     }
 
     .main-article {
-      background-image: url("../imgs/Mountains-and-hills.png");
+      background-image: $bg_mountains_and_goats;
       background-repeat: no-repeat;
       background-position: center;
       height: 20rem;
@@ -102,7 +105,7 @@ body {
         }
         .article__image {
           outline: 2px solid $orange;
-          border: 2px solid #ffffff;
+          border: 2px solid $light;
         }
         .article__link-read-more {
           text-decoration: underline;
@@ -118,7 +121,7 @@ body {
             }
           }
           .post__image {
-            width: 2.5rem;
+            width: 3.5rem;
             height: 2.5rem;
             border: 1px solid #c4c4c4;
           }
